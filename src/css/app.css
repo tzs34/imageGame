@@ -1,0 +1,77 @@
+:root {
+  --backgroundColor: #282c34;
+  --label-color: #ffffff;
+  --warning-color: r#ff0000;
+  --btn-background-color: #ffffff;
+}
+
+body {
+  color: var(--label-color);
+  background-color: var(--backgroundColor);
+}
+
+button {
+  width: 200px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.app-header {
+  background-color: var(--backgroundColor);
+  min-height: 40px;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.game-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.player-tile {
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.player-label {
+  text-align: center;
+  color: var(--label-color);
+}
+
+.info-text {
+  color: var(--label-color);
+  padding: 2rem;
+}
+
+.warning-text {
+  color: var(--warning-color);
+  padding: 2rem;
+}
+
+.restart-btn {
+  background-color: var(--background-color);
+  color: var(--label-color);
+  border: none;
+  width: 100%;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .game-panel {
+    flex-direction: column;
+  }
+  .player-tile {
+    padding: 0.25rem;
+    margin: 0;
+  }
+}

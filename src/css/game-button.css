@@ -1,0 +1,27 @@
+.gb-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+}
+
+.gb-hint {
+  font-size: 1.5rem;
+}
+
+.gb-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background-color: var(--btn-background-color);
+  color: black;
+  border-radius: 5px;
+  display: block;
+  width: 300px;
+  height: 50px;
+}
+
+.gb-btn:hover {
+  background-color: #a0a0a0;
+}

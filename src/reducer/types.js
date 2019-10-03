@@ -1,0 +1,8 @@
+export const READY = 'READY'
+export const START_GAME = 'START_GAME'
+export const LOADING_PLAYERS = 'LOADING_PLAYERS'
+export const PLAYERS_LOADED = 'PLAYERS_LOADED'
+export const ERROR_LOADING_PLAYERS = 'ERROR_LOADING_PLAYERS'
+export const PLAY = 'PLAY'
+export const END_GAME = 'END_GAME'
+export const RESTART_GAME = 'RESTART_GAME'
