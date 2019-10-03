@@ -35,6 +35,7 @@ button {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  max-width: 600px;
 }
 
 .player-tile {
