@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { GameContext } from '../context/gameContext'
-import PlayerTile from './playerTile'
+import PlayerTile from './player-tile'
 import GameInformation from './game-infomration'
 import GameButton from './game-button'
 import GameScore from './game-score'
@@ -13,6 +13,11 @@ import {
   PLAY,
   RESTART_GAME
 } from '../reducer/types'
+import Copy from '../utils/copy'
+
+const {
+  labels: { buttonLabel, hintLabel }
+} = Copy
 
 const GamePanel = () => {
   const { state, dispatch } = useContext(GameContext)
@@ -79,12 +84,13 @@ const GamePanel = () => {
       )}
 
       <GameButton
-        label={'Start Game'}
-        hint={'Select a player'}
+        label={buttonLabel}
+        hint={hintLabel}
         showButton={!playing}
         onClick={() => {
           startGame()
         }}
+        data-testid="game-button"
       />
       <div>{playing && <GameScore score={playerScore} />}</div>
     </>

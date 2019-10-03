@@ -4,8 +4,11 @@ import {
   ERROR_LOADING_PLAYERS,
   LOADING_PLAYERS
 } from '../reducer/types'
+import propTypes from 'prop-types'
 
 import '../css/game-button.css'
+
+const { string, func } = propTypes
 
 const GameInformation = ({ gameStatus, reStartGame }) => {
   function handleRestartGame() {
@@ -35,6 +38,11 @@ const GameInformation = ({ gameStatus, reStartGame }) => {
   }
 
   return <>{renderGameInformation(gameStatus)}</>
+}
+
+GameInformation.propTypes = {
+  gameStatus: string.isRequired,
+  reStartGame: func
 }
 
 export default GameInformation

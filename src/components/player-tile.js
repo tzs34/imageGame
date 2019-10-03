@@ -1,5 +1,8 @@
 import React from 'react'
-import PlayerLabel from './playerLabel'
+import PlayerLabel from './player-label'
+import propTypes from 'prop-types'
+
+const { string, func, object } = propTypes
 
 const PlayerTile = ({ name, id, imageData, onClick }) => {
   function handleOnClick() {
@@ -20,6 +23,13 @@ const PlayerTile = ({ name, id, imageData, onClick }) => {
       <PlayerLabel name={name} />
     </div>
   )
+}
+
+PlayerTile.propTypes = {
+  name: string.isRequired,
+  id: string.isRequired,
+  imageData: object.isRequired,
+  onClick: func
 }
 
 export default PlayerTile
