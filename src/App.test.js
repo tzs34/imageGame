@@ -5,7 +5,8 @@ import App from './App'
 import Copy from '../src/utils/copy'
 
 const {
-  labels: { buttonLabel, title }
+  title,
+  labels: { buttonLabel }
 } = Copy
 
 describe('<App />', () => {
