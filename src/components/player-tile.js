@@ -11,11 +11,11 @@ const PlayerTile = ({ name, id, imageData, onClick }) => {
     }
   }
   return (
-    <div className="player-tile">
+    <div className="player-tile" data-testid={`player-tile-${id}`}>
       <div onClick={handleOnClick}>
         <img
           src={imageData.url}
-          alt={name}
+          alt={`image of ${name}`}
           width={imageData.width}
           height={imageData.height}
         />
