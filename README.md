@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Important. To run the application you should 
 
 1. Create a dotenv ('.env') file in the root of the application. In this file add
-# REACT_APP_PLAYERS_JSON_URL = 'the endpoint to fetch daa provided in the task description'
+#### REACT_APP_PLAYERS_JSON_URL = 'the endpoint to fetch daa provided in the task description'
 
 Alternatively ask the author for the details.
 
