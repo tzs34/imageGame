@@ -5,10 +5,9 @@ import App from './App'
 import Copy from '../src/utils/copy'
 
 const {
-  labels: { buttonLabel }
+  labels: { buttonLabel, title }
 } = Copy
 
-const title = 'a very long title'
 describe('<App />', () => {
   let wrapper
   beforeEach(() => {
