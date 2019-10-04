@@ -1,11 +1,12 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-const { number } = propTypes
+const { number, string } = propTypes
 
-const GameScore = ({ score }) => <div>{`Your current score is ${score}`}</div>
+const GameScore = ({ score, label }) => <div>{`${label} ${score}`}</div>
 
 GameScore.propTypes = {
-  score: number
+  score: number,
+  label: string
 }
 export default GameScore

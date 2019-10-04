@@ -16,10 +16,15 @@ import {
 import Copy from '../utils/copy'
 
 const {
-  labels: { buttonLabel, hintLabel, loadingLabel, warningLabel, endLabel }
+  labels: {
+    buttonLabel,
+    hintLabel,
+    loadingLabel,
+    warningLabel,
+    endLabel,
+    scoreLabel
+  }
 } = Copy
-
-console.log(loadingLabel, warningLabel, endLabel)
 
 const GamePanel = () => {
   const { state, dispatch } = useContext(GameContext)
@@ -97,7 +102,9 @@ const GamePanel = () => {
         }}
         data-testid="game-button"
       />
-      <div>{playing && <GameScore score={playerScore} />}</div>
+      <div>
+        {playing && <GameScore score={playerScore} label={scoreLabel} />}
+      </div>
     </>
   )
 }

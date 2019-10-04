@@ -5,6 +5,7 @@ export default {
     hintLabel: 'Select Player',
     loadingLabel: 'Loading...',
     warningLabel: ' There was an error loading players...',
-    endLabel: ' Good Game ! Click here to have another go'
+    endLabel: ' Good Game ! Click here to have another go',
+    scoreLabel: 'Your current score is '
   }
 }
