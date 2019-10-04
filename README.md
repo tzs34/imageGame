@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ### Note
-Important. To run the application you should 
+Important. Before attempting to run the application you should 
 
 1. Create a dotenv ('.env') file in the root of the application. In this file add
 #### REACT_APP_PLAYERS_JSON_URL = 'the endpoint to fetch daa provided in the task description'
