@@ -69,6 +69,15 @@ const GamePanel = () => {
     dispatch({ type: START_GAME })
   }
 
+  function handleOnKeyPress(e) {
+    if (e.key == 'Enter') {
+      startGame()
+    }
+    if (e.key == 'Space') {
+      startGame()
+    }
+  }
+
   function endCurrentGame() {
     dispatch({ type: RESTART_GAME })
   }
@@ -100,6 +109,7 @@ const GamePanel = () => {
         onClick={() => {
           startGame()
         }}
+        onKeyPress={handleOnKeyPress}
         data-testid="game-button"
       />
       <div>

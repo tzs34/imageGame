@@ -10,9 +10,28 @@ const PlayerTile = ({ name, id, imageData, onClick }) => {
       onClick(id)
     }
   }
+
+  function handleOnKeyPress(e) {
+    if (e.key == 'Enter') {
+      if (onClick) {
+        onClick(id)
+      }
+    }
+    if (e.key == 'Space') {
+      if (onClick) {
+        onClick(id)
+      }
+    }
+  }
+
   return (
     <div className="player-tile" data-testid={`player-tile-${id}`}>
-      <div role="button" onClick={handleOnClick}>
+      <div
+        role="button"
+        tabindex="0"
+        onClick={handleOnClick}
+        onKeyPress={handleOnKeyPress}
+      >
         <img
           src={imageData.url}
           alt={`image of ${name}`}
