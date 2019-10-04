@@ -1,4 +1,5 @@
 export default {
+  title: 'Guess which player has the highest Fantasy Points Per Game',
   labels: {
     buttonLabel: 'Start Game',
     hintLabel: 'Select Player',
