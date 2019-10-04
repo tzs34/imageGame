@@ -10,7 +10,13 @@ import '../css/game-button.css'
 
 const { string, func } = propTypes
 
-const GameInformation = ({ gameStatus, reStartGame }) => {
+const GameInformation = ({
+  gameStatus,
+  reStartGame,
+  loadingLabel,
+  warningLabel,
+  endGameLabel
+}) => {
   function handleRestartGame() {
     if (reStartGame) {
       reStartGame()
@@ -18,20 +24,17 @@ const GameInformation = ({ gameStatus, reStartGame }) => {
   }
 
   function renderGameInformation(status) {
+    console.log(loadingLabel, warningLabel, endGameLabel)
     if (status === LOADING_PLAYERS) {
-      return <div className="info-text">Loading...</div>
+      return <div className="info-text">{loadingLabel}</div>
     }
     if (status === ERROR_LOADING_PLAYERS) {
-      return (
-        <div className="warning-text">
-          There was an error loading players...
-        </div>
-      )
+      return <div className="warning-text">{warningLabel}</div>
     }
     if (status === END_GAME) {
       return (
         <button className="restart-btn" onClick={handleRestartGame}>
-          Good Game !. Click here to have another go
+          {endGameLabel}
         </button>
       )
     }

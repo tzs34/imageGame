@@ -16,8 +16,10 @@ import {
 import Copy from '../utils/copy'
 
 const {
-  labels: { buttonLabel, hintLabel }
+  labels: { buttonLabel, hintLabel, loadingLabel, warningLabel, endLabel }
 } = Copy
+
+console.log(loadingLabel, warningLabel, endLabel)
 
 const GamePanel = () => {
   const { state, dispatch } = useContext(GameContext)
@@ -78,6 +80,9 @@ const GamePanel = () => {
             <GameInformation
               gameStatus={gameStatus}
               reStartGame={endCurrentGame}
+              loadingLabel={loadingLabel}
+              warningLabel={warningLabel}
+              endGameLabel={endLabel}
             />
           )}
         </div>
