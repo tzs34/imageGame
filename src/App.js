@@ -1,7 +1,7 @@
 import React from 'react'
+import propTypes from 'prop-types'
 import GameProvider from './context/gameContext'
 import GamePanel from './components/game-panel'
-import propTypes from 'prop-types'
 
 import '../src/css/app.css'
 
@@ -11,7 +11,7 @@ const App = ({ title }) => (
   <GameProvider>
     <main className="app">
       <h1 className="app-header">{title}</h1>
-      <GamePanel data-testid="game-panel" />
+      <GamePanel />
     </main>
   </GameProvider>
 )
