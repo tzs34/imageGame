@@ -31,4 +31,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 
 ### Description.
-This appication refactored an angular application for a game described in the task. The React apication uses React Hooks , useReducer and useContext to provide state management. 
+This appication refactored an angular application for a game described in the task. The React application uses React Hooks , useReducer and useContext to provide state management. 
